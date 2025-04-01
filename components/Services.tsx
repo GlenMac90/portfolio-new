@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import SectionHeading from "./SectionHeading";
+import SectionWrapper from "./SectionWrapper";
 
 const servicesData = [
   {
@@ -31,17 +32,17 @@ const servicesData = [
 
 const Services = () => {
   return (
-    <section className="mt-40 flex flex-col items-center justify-center">
+    <SectionWrapper>
       <SectionHeading
         heading="Bringing Your Ideas To Life"
         subHeading="How I Can Help You Achieve Your Goals"
         icon="services"
       />
-      <div className="mt-15 flex gap-2.5">
+      <div className="mt-15 grid gap-2.5 grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
         {servicesData.map((service) => (
           <div
             key={service.title}
-            className="px-6 py-7 flex flex-col rounded-xl bg-gray-800/60"
+            className="px-6 py-7 flex flex-col rounded-xl bg-gray-800"
           >
             <div className="rounded-lg p-3.5 bg-purple-300 flex w-fit">
               <Image
@@ -60,7 +61,7 @@ const Services = () => {
           </div>
         ))}
       </div>
-    </section>
+    </SectionWrapper>
   );
 };
 

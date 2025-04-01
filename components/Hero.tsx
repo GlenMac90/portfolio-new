@@ -32,7 +32,7 @@ const mediaLinks = [
 
 const Hero = () => {
   return (
-    <section className="mt-13 flex w-full justify-between gap-30">
+    <section className="mt-13 flex flex-col lg:flex-row w-full justify-between gap-4">
       <div className="flex flex-col gap-5 w-full">
         <Label>
           <Image
@@ -48,11 +48,12 @@ const Hero = () => {
           Professional Web Developer Based In Bulgaria
         </h1>
         <span className="text-gray-100 text-lg">
-          Hi, I'm Glen, a developer building solutions to grow your business.
+          Hi, I&apos;m Glen, a developer building solutions to grow your
+          business.
         </span>
         <div className="flex gap-6">
           <Button>
-            Let's Connect{" "}
+            Let&apos;s Connect{" "}
             <Image
               src="/icons/right-arrow.png"
               alt="right arrow"
@@ -77,7 +78,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="flex w-fit rounded-xl bg-gray-800/60">
+      <div className="flex w-full rounded-xl max-w-xl self-center">
         <Animation />
       </div>
     </section>

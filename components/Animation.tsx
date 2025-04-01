@@ -1,12 +1,9 @@
-import React from "react";
-
 const Animation = () => {
   return (
     <svg
-      width="500"
-      height="500"
+      className="w-full h-full"
       viewBox="0 0 500 500"
-      fill="none"
+      fill=""
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
