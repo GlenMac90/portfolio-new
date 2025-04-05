@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Button from "./Button";
 
 const Navbar = () => {
   const navLinks = [
@@ -41,11 +40,13 @@ const Navbar = () => {
             </button>
           ))}
         </div>
-        <Button className="cursor-pointer">
-          <Link target="_blank" href="/glen-mccallum-resume.pdf">
-            Download CV
-          </Link>
-        </Button>
+        <Link
+          target="_blank"
+          href="/glen-mccallum-resume.pdf"
+          className="flex py-2.5 lg:py-3 whitespace-nowrap px-6 lg:px-8 items-center justify-center rounded-lg font-medium bg-gradient-to-b from-purple-100 to-purple-200 to-50% text-white"
+        >
+          Download CV
+        </Link>
       </div>
     </nav>
   );
