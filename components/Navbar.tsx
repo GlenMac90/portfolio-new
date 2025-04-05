@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 bg-gray-800 w-full flex justify-center">
-      <div className="flex justify-between items-center w-full max-w-7xl py-8 px-6 lg:px-13 h-22">
+      <div className="flex justify-between items-center w-full max-w-7xl py-8 px-4 sm:px-6 lg:px-13 h-22">
         <button
           onClick={handleScrollTop}
           className="cursor-pointer bg-clip-text text-xl font-semibold text-transparent bg-gradient-to-b from-purple-100 to-purple-200"

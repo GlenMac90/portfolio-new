@@ -26,7 +26,7 @@ const experienceData = [
     icon: "/experience/freelance.png",
     position: "Front-End Developer",
     duration: "Jan 2023 - Jun 2024",
-    location: "Remote, United Kingdom",
+    location: "Remote, UK",
     responsibilities: [
       "Building responsive and user-friendly web applications using React and Next.js.",
       "Implementing clean and efficient code to ensure optimal performance.",
@@ -40,7 +40,7 @@ const experienceData = [
     icon: "/experience/medal.png",
     position: "Front-End Developer",
     duration: "Jun 2023 - Dec 2023",
-    location: "Remote, United Kingdom",
+    location: "Remote, UK",
     responsibilities: [
       "Participated in a 6-month course developing real-world projects using React, Next.js, Tailwind CSS, TypeScript, and MongoDB.",
       "Over 500 hours of coding and a 0.78% acceptance rate",
@@ -64,7 +64,7 @@ const Experience = () => {
           return (
             <div
               key={experience.company}
-              className="flex lg:grid gap-5 w-full mt-4 lg:grid-cols-9 relative lg:h-90"
+              className="flex lg:grid gap-2 sm:gap-5 w-full mt-4 lg:grid-cols-9 relative lg:h-90"
             >
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
@@ -78,7 +78,7 @@ const Experience = () => {
                 <h3 className="lg:text-3xl text-2xl font-semibold text-white">
                   {experience.position}
                 </h3>
-                <div className="mt-3.5 flex gap-y-2 gap-x-5 lg:text-lg text-gray-100 whitespace-nowrap flex-wrap">
+                <div className="mt-3.5 flex gap-y-2 gap-x-5 text-sm lg:text-lg text-gray-100 whitespace-nowrap flex-wrap">
                   <div className="flex gap-2 items-center">
                     <Image
                       src="/icons/calendar.png"

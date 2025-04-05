@@ -8,7 +8,7 @@ const SectionWrapper = ({
   return (
     <section
       id={id}
-      className="mt-20 lg:mt-16 flex flex-col items-center justify-center p-6 lg:p-13"
+      className="flex flex-col items-center justify-center p-4 sm:p-6 lg:p-13"
     >
       {children}
     </section>

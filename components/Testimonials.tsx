@@ -52,7 +52,7 @@ const Testimonials = () => {
             className="flex flex-col p-7 rounded-lg bg-gray-800 gap-4.5 mb-5 break-inside-avoid-column"
           >
             <p className="text-gray-100 text-lg">{testimonial.text}</p>
-            <div className="flex w-full items-center justify-between">
+            <div className="flex w-full items-center justify-between flex-wrap">
               <div className="gap-2.5 flex items-center">
                 <Image
                   src={testimonial.image}

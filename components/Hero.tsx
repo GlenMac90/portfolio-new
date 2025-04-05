@@ -32,7 +32,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="lg:mt-3 flex flex-col lg:flex-row w-full justify-between gap-4 lg:gap-4 p-6 lg:p-13 overflow-hidden"
+      className="lg:mt-3 flex flex-col lg:flex-row w-full justify-between gap-4 lg:gap-4 sm:p-6 p-4 lg:p-13 overflow-hidden"
     >
       <motion.div
         className="flex flex-col gap-5 w-full"
@@ -50,7 +50,7 @@ const Hero = () => {
           Full Stack Developer
         </Label>
 
-        <h1 className="lg:text-[64px] lg:leading-[72px] text-[48px] leading-[56px] font-semibold text-white">
+        <h1 className="lg:text-[64px] lg:leading-[72px] sm:text-[48px] sm:leading-[56px] text-[40px] leading-[48px] font-semibold text-white">
           Professional Web Developer
         </h1>
         <span className="text-gray-100 lg:text-lg">
