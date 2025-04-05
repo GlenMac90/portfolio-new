@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Button from "./Button";
 
 const Navbar = () => {
@@ -40,8 +41,10 @@ const Navbar = () => {
             </button>
           ))}
         </div>
-        <Button onClick={handleScrollTop} className="cursor-pointer">
-          Download CV
+        <Button className="cursor-pointer">
+          <Link target="_blank" href="/glen-mccallum-resume.pdf">
+            Download CV
+          </Link>
         </Button>
       </div>
     </nav>
