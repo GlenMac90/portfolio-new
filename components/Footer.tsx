@@ -27,7 +27,7 @@ const mediaLinks = [
 
 const Footer = () => {
   return (
-    <footer className="mt-10 lg:mt-25 flex flex-col sm:flex-row w-full justify-between items-center py-5 gap-5">
+    <footer className="mt-10 lg:mt-25 flex flex-col sm:flex-row w-full justify-between items-center py-5 gap-5 p-6 lg:p-13">
       <div className="flex gap-5">
         {mediaLinks.map((link) => (
           <Link

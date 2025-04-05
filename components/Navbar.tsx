@@ -1,21 +1,47 @@
+"use client";
+
 import Button from "./Button";
 
 const Navbar = () => {
-  const navLinks = ["Works", "Skills", "Experience", "Testimonials"];
+  const navLinks = [
+    { label: "Skills", id: "skills" },
+    { label: "Experience", id: "experience" },
+    { label: "Testimonials", id: "testimonials" },
+  ];
+
+  const handleScrollTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleScroll = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   return (
-    <nav className="sticky top-0 z-50 flex justify-between h-22 rounded-2xl items-center bg-gray-800 w-full max-w-7xl p-8">
-      <span className="bg-clip-text text-xl font-semibold text-transparent bg-gradient-to-b from-purple-100 to-purple-200">
+    <nav className="sticky top-0 z-50 flex justify-between h-22 items-center bg-gray-800 w-full max-w-7xl py-8 px-6 lg:px-13">
+      <button
+        onClick={handleScrollTop}
+        className="cursor-pointer bg-clip-text text-xl font-semibold text-transparent bg-gradient-to-b from-purple-100 to-purple-200"
+      >
         GlenM
-      </span>
-      <div className="gap-10 hidden lg:flex">
-        {navLinks.map((link) => (
-          <span className="text-gray-100 text-xl" key={link}>
-            {link}
-          </span>
+      </button>
+      <div className="gap-10 hidden sm:flex">
+        {navLinks.map(({ label, id }) => (
+          <button
+            className="cursor-pointer bg-gray-100 lg:text-xl bg-clip-text text-transparent hover:bg-gradient-to-b hover:from-purple-100 hover:to-purple-200 transition-all duration-300"
+            key={id}
+            onClick={() => handleScroll(id)}
+          >
+            {label}
+          </button>
         ))}
       </div>
-      <Button>Contact Me</Button>
+      <Button onClick={handleScrollTop} className="cursor-pointer">
+        Download CV
+      </Button>
     </nav>
   );
 };

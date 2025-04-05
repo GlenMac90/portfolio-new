@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 import SectionHeading from "./SectionHeading";
@@ -32,19 +35,23 @@ const servicesData = [
 
 const Services = () => {
   return (
-    <SectionWrapper>
+    <SectionWrapper id="services">
       <SectionHeading
         heading="Bringing Your Ideas To Life"
         subHeading="How I Can Help You Achieve Your Goals"
         icon="services"
       />
       <div className="mt-15 grid gap-2.5 grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
-        {servicesData.map((service) => (
-          <div
+        {servicesData.map((service, index) => (
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7 + index * 0.15, duration: 0.7 }}
+            viewport={{ once: true }}
             key={service.title}
             className="px-6 py-7 flex flex-col rounded-xl bg-gray-800"
           >
-            <div className="rounded-lg p-3.5 bg-purple-300 flex w-fit">
+            <div className="rounded-lg p-3.5 bg-purple-300 border border-purple-200/20 flex w-fit">
               <Image
                 src={service.icon}
                 alt={service.title}
@@ -58,7 +65,7 @@ const Services = () => {
             <p className="mt-2.5 text-sm text-gray-100">
               {service.description}
             </p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </SectionWrapper>

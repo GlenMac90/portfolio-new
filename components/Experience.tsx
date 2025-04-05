@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 import SectionHeading from "./SectionHeading";
@@ -40,6 +43,7 @@ const experienceData = [
     location: "Remote, United Kingdom",
     responsibilities: [
       "Participated in a 6-month course developing real-world projects using React, Next.js, Tailwind CSS, TypeScript, and MongoDB.",
+      "Over 500 hours of coding and a 0.78% acceptance rate",
       "Learned about the latest features and best practices in React, Next.js, and TypeScript.",
     ],
     gradientClasses: "bg-gradient-to-b from-gradient-blue to-gradient-green/10",
@@ -48,7 +52,7 @@ const experienceData = [
 
 const Experience = () => {
   return (
-    <SectionWrapper>
+    <SectionWrapper id="experience">
       <SectionHeading
         heading="Driving My Career Forward"
         subHeading="My Professional Journey"
@@ -62,15 +66,19 @@ const Experience = () => {
               key={experience.company}
               className="flex lg:grid gap-5 w-full mt-4 lg:grid-cols-9 relative lg:h-90"
             >
-              <div
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.7 }}
+                viewport={{ once: true, margin: "0px 0px -50px 0px" }}
                 className={`${
                   isEven ? "lg:col-start-6" : "lg:col-start-1"
                 } lg:col-span-4 p-7 w-full h-fit flex flex-col rounded-xl bg-gray-800 border border-gray-700`}
               >
-                <h3 className="text-3xl font-semibold text-white">
+                <h3 className="lg:text-3xl text-2xl font-semibold text-white">
                   {experience.position}
                 </h3>
-                <div className="mt-3.5 flex gap-5">
+                <div className="mt-3.5 flex gap-y-2 gap-x-5 lg:text-lg text-gray-100 whitespace-nowrap flex-wrap">
                   <div className="flex gap-2 items-center">
                     <Image
                       src="/icons/calendar.png"
@@ -78,9 +86,7 @@ const Experience = () => {
                       width={20}
                       height={20}
                     />
-                    <span className="text-lg text-gray-100">
-                      {experience.duration}
-                    </span>
+                    <span>{experience.duration}</span>
                   </div>
                   <div className="flex gap-2 items-center">
                     <Image
@@ -89,9 +95,7 @@ const Experience = () => {
                       width={20}
                       height={20}
                     />
-                    <span className="text-lg text-gray-100">
-                      {experience.location}
-                    </span>
+                    <span>{experience.location}</span>
                   </div>
                 </div>
                 <em className="text-gray-200 font-medium mt-6">
@@ -99,15 +103,24 @@ const Experience = () => {
                 </em>
                 <ul className="mt-3 gap-2 flex flex-col">
                   {experience.responsibilities.map((responsibility) => (
-                    <li key={responsibility} className="text-gray-100 flex">
+                    <li
+                      key={responsibility}
+                      className="text-gray-100 text-sm lg:text-base flex"
+                    >
                       <div className="h-1 w-1 mt-[11px] rounded-full bg-gray-100 mr-3 shrink-0" />
                       {responsibility}
                     </li>
                   ))}
                 </ul>
-              </div>
+              </motion.div>
               <div className="lg:col-span-1 lg:col-start-5 w-fit flex flex-col items-center lg:absolute lg:left-1/2 lg:-translate-x-1/2 relative">
-                <div className="z-20 p-2.5 size-[70px] rounded-full bg-gray-800 border border-gray-700">
+                <motion.div
+                  initial={{ scale: 0, opacity: 0 }}
+                  whileInView={{ scale: [0, 1.2, 1], opacity: 1 }}
+                  transition={{ duration: 0.7 }}
+                  viewport={{ once: true, margin: "0px 0px -50px 0px" }}
+                  className="z-20 p-2.5 size-[70px] rounded-full bg-gray-800 border border-gray-700"
+                >
                   <Image
                     src={experience.icon}
                     alt={experience.company}
@@ -115,9 +128,20 @@ const Experience = () => {
                     height={50}
                     className="shrink-0"
                   />
-                </div>
-                <span
-                  className={`z-10 border-l absolute lg:flex h-full translate-y-10 w-0.5 lg:h-[350px] ${experience.gradientClasses}`}
+                </motion.div>
+                <motion.span
+                  initial={{ height: 0 }}
+                  whileInView={{ height: 350 }}
+                  transition={{ delay: 0.4, duration: 0.7 }}
+                  viewport={{ once: true, margin: "0px 0px -50px 0px" }}
+                  className={`z-10 border-l absolute hidden lg:flex translate-y-10 w-0.5 h-[350px] ${experience.gradientClasses}`}
+                />
+                <motion.span
+                  initial={{ height: 0 }}
+                  whileInView={{ height: "100%" }}
+                  transition={{ delay: 0.4, duration: 0.7 }}
+                  viewport={{ once: true, margin: "0px 0px -50px 0px" }}
+                  className={`z-10 border-l absolute lg:hidden flex h-full translate-y-10 w-0.5 ${experience.gradientClasses}`}
                 />
               </div>
             </div>

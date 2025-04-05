@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${monaSans.variable} antialiased bg-black p-13 flex flex-col items-center`}
+        className={`${monaSans.variable} antialiased bg-black flex flex-col items-center overscroll-none`}
       >
         <Navbar />
         {children}

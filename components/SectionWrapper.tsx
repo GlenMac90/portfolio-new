@@ -1,6 +1,15 @@
-const SectionWrapper = ({ children }: { children: React.ReactNode }) => {
+const SectionWrapper = ({
+  children,
+  id,
+}: {
+  children: React.ReactNode;
+  id: string;
+}) => {
   return (
-    <section className="mt-20 lg:mt-34 flex flex-col items-center justify-center">
+    <section
+      id={id}
+      className="mt-20 lg:mt-16 flex flex-col items-center justify-center p-6 lg:p-13"
+    >
       {children}
     </section>
   );

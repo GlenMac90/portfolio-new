@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 import SectionHeading from "./SectionHeading";
@@ -32,16 +35,20 @@ const testimonialsData = [
 
 const Testimonials = () => {
   return (
-    <SectionWrapper>
+    <SectionWrapper id="testimonials">
       <SectionHeading
         heading="Customer Feedback Highlights"
         subHeading="What My Clients And Colleagues Say"
         icon="experience"
       />
       <div className="mt-15 gap-x-6 gap-y-5 w-full columns-1 lg:columns-2 [column-fill:_balance]">
-        {testimonialsData.map((testimonial) => (
-          <div
+        {testimonialsData.map((testimonial, index) => (
+          <motion.div
             key={testimonial.name}
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.7 + index * 0.15, duration: 0.7 }}
+            viewport={{ once: true }}
             className="flex flex-col p-7 rounded-lg bg-gray-800 gap-4.5 mb-5 break-inside-avoid-column"
           >
             <p className="text-gray-100 text-lg">{testimonial.text}</p>
@@ -67,7 +74,7 @@ const Testimonials = () => {
                 className="mt-1"
               />
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </SectionWrapper>
