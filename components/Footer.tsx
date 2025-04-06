@@ -1,13 +1,8 @@
 import Link from "next/link";
-import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 
 const mediaLinks = [
-  {
-    name: "Instagram",
-    icon: <FaInstagram />,
-    link: "https://www.instagram.com",
-  },
   {
     name: "Github",
     icon: <FaGithub />,
