@@ -25,7 +25,7 @@ const experienceData = [
     company: "Freelance",
     icon: "/experience/freelance.png",
     position: "Front-End Developer",
-    duration: "Jan 2023 - Jun 2024",
+    duration: "Jan 2024 - Jun 2024",
     location: "Remote, UK",
     responsibilities: [
       "Building responsive and user-friendly web applications using React and Next.js.",
