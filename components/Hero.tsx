@@ -74,7 +74,7 @@ const Hero = () => {
           <div className="flex w-full gap-4">
             {mediaLinks.map((link, index) => (
               <motion.div
-                className="flex hover:scale-105 transition-all duration-200"
+                className="flex hover:scale-110 hover:rotate-5 transition-all duration-200"
                 key={link.name}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
