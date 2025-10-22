@@ -19,7 +19,6 @@ const experienceData = [
       "Managing and implementing integrations with major cloud platforms such as AWS, Azure, and Oracle.",
       "Collaborating closely with clients, designers, and stakeholders to translate business requirements into technical solutions and deliver exceptional user experiences.",
       "Developing AI-powered solutions, including features for file analysis, intelligent querying, and data-driven automation.",
-      "Contributing to both front-end and back-end development, ensuring seamless communication between systems and a polished, responsive UI.",
     ],
     gradientClasses: "bg-gradient-to-b from-gradient-purple to-gradient-pink",
   },
@@ -66,7 +65,7 @@ const Experience = () => {
           return (
             <div
               key={experience.company}
-              className="flex lg:grid gap-2 sm:gap-5 w-full mt-4 lg:grid-cols-9 relative lg:h-100"
+              className="flex lg:grid gap-2 sm:gap-5 w-full mt-4 lg:grid-cols-9 relative lg:h-90"
             >
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
