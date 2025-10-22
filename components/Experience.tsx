@@ -66,7 +66,7 @@ const Experience = () => {
           return (
             <div
               key={experience.company}
-              className="flex lg:grid gap-2 sm:gap-5 w-full mt-4 lg:grid-cols-9 relative lg:h-90"
+              className="flex lg:grid gap-2 sm:gap-5 w-full mt-4 lg:grid-cols-9 relative lg:h-100"
             >
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
